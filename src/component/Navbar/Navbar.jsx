@@ -23,8 +23,8 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
    {/* sign and log */}
-   <Link className='mr-2 btn btn-secondary text-white'>Login</Link>
-   <Link className='btn btn-secondary text-white'>Sign in</Link>
+   <Link to='/login' className='mr-2 btn btn-secondary text-white'>Login</Link>
+   <Link to='/signup' className='btn btn-secondary text-white'>Sign in</Link>
     {/* ///////// */}
      {/* ava */}
      <div className="avatar ms-2 ">
