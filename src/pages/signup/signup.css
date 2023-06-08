@@ -9,7 +9,7 @@
   .sub-main {
     display: flex;
     justify-content: center;
-    height: 550px;
+    height: 630px;
     width: 35%;
     box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
     padding-top: 30px;
@@ -58,7 +58,7 @@
       font-size: 20px;
   }
   .second-input{
-      padding-top: 20px;
+      padding-top: 15px;
   }
 
   button{
@@ -71,7 +71,7 @@
       border: none;
   }
   .login-button{
-      padding-top: 18px;
+      padding-top: 5px;
   }
 
   .link{

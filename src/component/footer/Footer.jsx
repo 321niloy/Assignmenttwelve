@@ -3,7 +3,7 @@ import footerimg from '../../../public/images/Shutterstock_2095487767.webp'
 
 const Footer = () => {
     return (
-        <div>
+        <div className='mt-4'>
             <footer className="footer footer-center p-10  bg-purple-600 text-white">
   <div>
     <img className='w-20 rounded' src={footerimg} alt="" />
