@@ -4,6 +4,7 @@ import start from '../../../public/images/Shutterstock_2095487767.webp'
 import { Link } from 'react-router-dom';
 import { Authcontext } from '../../component/provider/Authprovider/Authprovider';
 import useTitle from '../../hook/useTitle';
+import { saveUser } from '../../api/auth';
 
 const Signup = () => {
   useTitle("Signup")
@@ -44,6 +45,7 @@ const Signup = () => {
         createUser(email,password)
         .then(result => {
           const Createuser = result.user;
+          saveUser(Createuser)
           console.log(Createuser)
           setsuc('Signup successfull')
           updateUserProfile( name, photo)

@@ -1,0 +1,73 @@
+[
+    {
+      "image": "https://i.ibb.co/9yfPp0V/guiter.jpg",
+      "name": "Guiter",
+      "instructorName": "John Doe",
+      "availableSeats": 30,
+      "price": 55000
+    },
+    {
+      "image": "https://i.ibb.co/qpYHYDH/Harmoni.jpg",
+      "name": "Harmoni",
+      "instructorName": "Jane Smith",
+      "availableSeats": 40,
+      "price": 7500
+    },
+    {
+      "image": "https://i.ibb.co/VvRxZhd/Tabla.jpg",
+      "name": "Tabla",
+      "instructorName": "Michael Johnson",
+      "availableSeats": 50,
+      "price": 6000
+    },
+    {
+      "image": "https://i.ibb.co/XLHg6qm/Violin.jpg",
+      "name": "Violin",
+      "instructorName": "Emily Davis",
+      "availableSeats": 120,
+      "price": 900
+    },
+    {
+      "image": "https://i.ibb.co/nnChx7G/Drams.jpg",
+      "name": "Drams",
+      "instructorName": "David Wilson",
+      "availableSeats": 80,
+      "price": 1200
+    },
+    {
+      "image": "https://i.ibb.co/JjnpfTK/flute.jpg",
+      "name": "Flute",
+      "instructorName": "Sarah Anderson",
+      "availableSeats": 60,
+      "price": 7000
+    },
+    {
+      "image": "https://i.ibb.co/YLV0tJy/trumpet.jpg",
+      "name": "Trumpet",
+      "instructorName": "Daniel Martinez",
+      "availableSeats": 50,
+      "price": 1000
+    },
+    {
+      "image": "https://i.ibb.co/CKt6sVM/saxophone.jpg",
+      "name": "Saxophone",
+      "instructorName": "Olivia Taylor",
+      "availableSeats": 140,
+      "price": 5500
+    },
+    {
+      "image": "https://i.ibb.co/dWpsj0d/saitar.jpg",
+      "name": "Saitar",
+      "instructorName": "William Thomas",
+      "availableSeats": 25,
+      "price": 8000
+    },
+    {
+      "image": "https://i.ibb.co/XFXzBkp/Banjo.jpg",
+      "name": "Banjo",
+      "instructorName": "Ava Hernandez",
+      "availableSeats": 60,
+      "price": 1500
+    }
+  ]
+  

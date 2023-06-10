@@ -2,15 +2,20 @@ import React, { useContext } from 'react';
 import './login.css'
 import start from '../../../../public/images/Shutterstock_2095487767.webp'
 import { FaEnvelope} from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Authcontext } from '../../../component/provider/Authprovider/Authprovider';
 import Swal from 'sweetalert2';
 import { FaGoogle } from 'react-icons/fa';
 import useTitle from '../../../hook/useTitle';
 
+
 const Login = () => {
     useTitle('Login')
 const {signIn,googleSignIn} = useContext(Authcontext)
+const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
 
 const handlelogin= event =>{
     event.preventDefault()
@@ -22,13 +27,14 @@ const handlelogin= event =>{
     signIn(email, password)
             .then(result => {
                 const user = result.user;
+              
                 console.log(user);
                 Swal.fire(
                     'Login Successful!',
                     'You clicked the button!',
                     'success'
                   );
-               
+                  navigate(from, { replace: true });
             })
 }
 
@@ -36,6 +42,8 @@ const googlehandelaer = () =>{
     googleSignIn()
     .then((result) => {
       const loguser = result.user;
+  
+      navigate(from, { replace: true });
       console.log(loguser)
     })
     .catch((error) => {
