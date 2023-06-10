@@ -12,6 +12,8 @@ import Instrument from "./pages/Instrument/Instrument";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Selactedclass from "./pages/selactedclassed/Selactedclass";
 
+import Addclass from "./pages/Manageclasses/addclass/Addclass";
+
 
 export const router = createBrowserRouter([
     {
@@ -47,6 +49,10 @@ export const router = createBrowserRouter([
      {
       path:'selactedclass',
       element:<Selactedclass></Selactedclass>
+     },
+     {
+      path:'Addclasses',
+      element:<Addclass></Addclass>
      }
      ]
     },

@@ -55,6 +55,7 @@ const InstruementCard = ({instru}) => {
         <div className="card-body">
           <h2 className="card-title mx-auto">Name: {instru.name}</h2>
           <p>Instructors Name: {instru.instructorName}</p>
+          <p>Instructors  Email: {instru.instructorEmail?instructorEmail:"Now it is Not Available"}</p>
           <p>Available Seats: {instru.availableSeats}</p>
           <p>Price: {instru.price}</p>
           <div className="card-actions justify-center">

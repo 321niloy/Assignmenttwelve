@@ -1,11 +1,13 @@
 import  { useContext, useEffect, useState } from 'react';
 import { Authcontext } from '../../component/provider/Authprovider/Authprovider';
 import Swal from 'sweetalert2';
+import useTitle from '../../hook/useTitle';
 
 
 const Selactedclass = () => {
     const {user} = useContext(Authcontext)
    const [selacteclass,setselacteclass] = useState([])
+   useTitle('Selacted Classes')
  
 
 useEffect(()=>{
@@ -45,7 +47,7 @@ const handlecancel =(id)=>{
 }
     return (
     
-      <div className='grid lg:grid-cols-2 gap-4'>
+      <div className='grid lg:grid-cols-2 gap-4 ms-4 shadow-2xl'>
       
       {
         selacteclass.map(s =>     <div className="card card-compact w-96 bg-base-100 shadow-xl">
@@ -53,6 +55,7 @@ const handlecancel =(id)=>{
         <div className="card-body">
           <h2 className="card-title mx-auto">Name: {s.name}</h2>
           <p>Instructors Name: {s.instructorName}</p>
+          <p>Instructors  Email: {s.instructorEmail?instructorEmail:"Now it is Not Available"}</p>
           <p>Available Seats: {s.availableSeats}</p>
           <p>Price: {s.price}</p>
           <div className="card-actions justify-center">

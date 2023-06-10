@@ -1,6 +1,8 @@
 import React from 'react';
 import useTitle from '../../hook/useTitle';
 import Slider from '../slider/Slider';
+import Populerclass from '../Populerclass/Populerclass';
+import Extrasection from '../extrasection/Extrasection';
 
 const Home = () => {
     useTitle('Home')
@@ -12,6 +14,8 @@ const Home = () => {
       
       <div className='mt-4'>
             <Slider></Slider>
+            <Populerclass></Populerclass>
+            <Extrasection></Extrasection>
         </div>
       </>
     );

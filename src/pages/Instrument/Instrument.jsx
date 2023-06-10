@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import InstruementCard from './InstruementCard';
+import useTitle from '../../hook/useTitle';
 
 
 const Instrument = () => {
     const [instruement,setinstrument] = useState()
+    useTitle('All Classes')
     useEffect(()=>{
         fetch('http://localhost:3000/instruement')
         .then(res => res.json())

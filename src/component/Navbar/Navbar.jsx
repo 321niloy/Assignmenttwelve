@@ -35,7 +35,7 @@ logOut()
   <div className="navbar-end">
    {/* sign and log */}
    {
-    user?  <button onClick={logoutbutton} className="btn btn-secondary">Logout</button> :<><Link to='/login' className='mr-2 btn btn-secondary text-white'>Login</Link>
+    user?  <button onClick={logoutbutton} className="btn btn-secondary w-24">Logout</button> :<><Link to='/login' className='mr-2 btn btn-secondary text-white'>Login</Link>
     <Link to='/signup' className='btn btn-secondary text-white'>Sign in</Link></>
    }
     {/* ///////// */}
