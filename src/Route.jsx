@@ -13,6 +13,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import Selactedclass from "./pages/selactedclassed/Selactedclass";
 
 import Addclass from "./pages/Manageclasses/addclass/Addclass";
+import Manageusers from "./component/manageusers/Manageusers";
 
 
 export const router = createBrowserRouter([
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
      {
       path:'Addclasses',
       element:<Addclass></Addclass>
+     },
+     {
+      path:'manrageuse',
+      element:<Manageusers></Manageusers>
      }
      ]
     },

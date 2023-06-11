@@ -8,12 +8,12 @@ const InstruementCard = ({instru}) => {
     const {user} = useContext(Authcontext)
     const location = useLocation();
     
-
+    console.log("instrue",instru)
     const handleselactedToCart = item => {
       console.log(item);
-      const {_id,image,name,instructorName,availableSeats,price} = item
+      const {_id,image,name,instructorName,availableSeats,price,instructorEmail} = item
       if(user && user.email){
-          const cartItem = {image,name,instructorName,availableSeats,price, email: user.email}
+          const cartItem = {image,name,instructorName,instructorEmail,availableSeats,price, email: user.email}
           fetch('http://localhost:3000/instrucarts', {
               method: 'POST',
               headers: {
@@ -55,7 +55,7 @@ const InstruementCard = ({instru}) => {
         <div className="card-body">
           <h2 className="card-title mx-auto">Name: {instru.name}</h2>
           <p>Instructors Name: {instru.instructorName}</p>
-          <p>Instructors  Email: {instru.instructorEmail?instructorEmail:"Now it is Not Available"}</p>
+          <p>Instructors  Email: {instru.instructorEmail?instru.instructorEmail: "Now it is Not Available" }</p>
           <p>Available Seats: {instru.availableSeats}</p>
           <p>Price: {instru.price}</p>
           <div className="card-actions justify-center">

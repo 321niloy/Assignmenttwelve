@@ -55,7 +55,7 @@ const handlecancel =(id)=>{
         <div className="card-body">
           <h2 className="card-title mx-auto">Name: {s.name}</h2>
           <p>Instructors Name: {s.instructorName}</p>
-          <p>Instructors  Email: {s.instructorEmail?instructorEmail:"Now it is Not Available"}</p>
+          <p>Instructors  Email: {s.instructorEmail?s.instructorEmail:"Now it is Not Available"}</p>
           <p>Available Seats: {s.availableSeats}</p>
           <p>Price: {s.price}</p>
           <div className="card-actions justify-center">

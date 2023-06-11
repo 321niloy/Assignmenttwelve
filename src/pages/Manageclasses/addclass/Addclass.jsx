@@ -11,7 +11,22 @@ const Addclass = () => {
         const price= form.price.value
         const image= form.photo.value
 
-        console.log(name,instructorName,instructorEmail,availableSeats,price,image)
+       
+        const addclasses = {
+            name,instructorName,instructorEmail,availableSeats,price,image
+        }
+        form.reset()
+        fetch(`http://localhost:3000/instruement`,{
+            method:'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addclasses)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data)
+        })
     }
     return (
         <div>
@@ -20,7 +35,7 @@ const Addclass = () => {
         <div className="min-h-screen py-40" > 
   <div className="container mx-auto">
     
-      <div className="w-full lg:w-1/2 py-16 px-12">
+      <div className="w-full lg:w-1/2 py-10 px-12">
         <h2 className="text-3xl mb-4 font-extrabold text-purple-500">=== ADD CLASSES ===</h2>
         
         <form onSubmit={handleAdd}>

@@ -42,7 +42,26 @@ export const becomeaAdmin = email =>{
 
 export const becomeaInstructor = email =>{
     const currentuser = {
-        role:'instructor'
+        status:'instructor'
+    }
+
+
+    fetch(`http://localhost:3000/users/${email}`,{
+        method:'PUT',
+        headers:{
+            'content-type':'application/json'
+        },
+        body: JSON.stringify(currentuser),
+    })
+    .then(res => res.json())
+    .then(data =>{
+        console.log(data)
+    })
+}
+
+export const becomeaStudent = email =>{
+    const currentuser = {
+        position:'instructor'
     }
 
 
