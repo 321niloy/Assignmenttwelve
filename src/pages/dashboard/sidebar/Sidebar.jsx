@@ -8,6 +8,7 @@ const Sidebar = () => {
             <li><Link to="/dashboard/selactedclass" className='text-white'>Classes</Link></li>
             <li><Link to="/dashboard/Addclasses" className='text-white'>Add Class</Link></li>
             <li><Link to="/dashboard/manrageuse" className='text-white'>Manage Classes</Link></li>
+            <li><Link to="/dashboard/updaterequest" className='text-white'>Update Request</Link></li>
         </div>
     );
 };

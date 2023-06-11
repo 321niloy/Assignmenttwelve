@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+
 
 const Addclass = () => {
+
     const handleAdd = event =>{
         event.preventDefault()
         const form = event.target
@@ -15,8 +18,9 @@ const Addclass = () => {
         const addclasses = {
             name,instructorName,instructorEmail,availableSeats,price,image
         }
+ 
         form.reset()
-        fetch(`http://localhost:3000/instruement`,{
+        fetch(`http://localhost:3000/requestcollection`,{
             method:'POST',
             headers: {
                 'content-type': 'application/json'
@@ -71,6 +75,7 @@ const Addclass = () => {
     </div>
   </div>
 </div>
+ 
         </div>
     );
 };

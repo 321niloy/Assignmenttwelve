@@ -2,6 +2,7 @@ import  { useContext, useEffect, useState } from 'react';
 import { Authcontext } from '../../component/provider/Authprovider/Authprovider';
 import Swal from 'sweetalert2';
 import useTitle from '../../hook/useTitle';
+import { Link } from 'react-router-dom';
 
 
 const Selactedclass = () => {
@@ -9,6 +10,8 @@ const Selactedclass = () => {
    const [selacteclass,setselacteclass] = useState([])
    useTitle('Selacted Classes')
  
+   // how does reduce work!!!
+   const total = selacteclass.reduce((sum, item) => item.price + sum, 0);
 
 useEffect(()=>{
     fetch(`http://localhost:3000/instrucarts/${user?.email}`,{
@@ -47,6 +50,13 @@ const handlecancel =(id)=>{
 }
     return (
     
+     <>
+       <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center mb-4">
+                <h3 className="text-3xl">Total classes: {selacteclass.length}</h3>
+                <h3 className="text-3xl">Total Price:${total}</h3>
+                <Link to='/dashboard/payment'><button className="btn bg-purple-500 text-white font-extrabold w-16">Enroll</button></Link>
+            </div>
+
       <div className='grid lg:grid-cols-2 gap-4 ms-4 shadow-2xl'>
       
       {
@@ -65,6 +75,8 @@ const handlecancel =(id)=>{
       </div>)
       }
       </div>
+     
+     </>
     );
 };
 

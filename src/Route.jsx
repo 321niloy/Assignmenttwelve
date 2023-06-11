@@ -1,7 +1,7 @@
 import {
     createBrowserRouter,
   } from "react-router-dom";
-import App from "./App";
+;
 import Home from "./component/home/Home";
 import Main from "./component/home/Main/Main";
 import Error from "./pages/error/Error";
@@ -14,6 +14,9 @@ import Selactedclass from "./pages/selactedclassed/Selactedclass";
 
 import Addclass from "./pages/Manageclasses/addclass/Addclass";
 import Manageusers from "./component/manageusers/Manageusers";
+import Updaterequest from "./pages/updaterequ/Updaterequest";
+import Payment from "./pages/Payment/Payment";
+
 
 
 export const router = createBrowserRouter([
@@ -58,6 +61,14 @@ export const router = createBrowserRouter([
      {
       path:'manrageuse',
       element:<Manageusers></Manageusers>
+     },
+     {
+      path:'updaterequest',
+      element:<Updaterequest></Updaterequest>
+     },
+     {
+      path:'payment',
+      element:<Payment></Payment>
      }
      ]
     },

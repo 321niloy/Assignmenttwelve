@@ -55,7 +55,7 @@ const Manageusers = () => {
             </th>
             <th>
             {
-                u.role?<button disabled  className="btn  btn-primary w-24">Instructor</button>:<button onClick={()=>instructorhandler(u.email)} className="btn btn-primary w-24">INSTRUCTOR</button>
+                u.status?<button disabled  className="btn  btn-primary w-24">Instructor</button>:<button onClick={()=>instructorhandler(u.email)} className="btn btn-primary w-24">INSTRUCTOR</button>
               }
             </th>
           </tr>
