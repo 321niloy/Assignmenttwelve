@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import useTitle from '../../../hook/useTitle';
 
 
 
 const Addclass = () => {
-
+useTitle('Add class')
     const handleAdd = event =>{
         event.preventDefault()
         const form = event.target
