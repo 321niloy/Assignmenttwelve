@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useTitle from '../../../hook/useTitle';
+import { Fade } from 'react-awesome-reveal';
 
 
 
@@ -41,7 +42,7 @@ useTitle('Add class')
   <div className="container mx-auto">
     
       <div className="w-full lg:w-1/2 py-10 px-12">
-        <h2 className="text-3xl mb-4 font-extrabold text-purple-500">=== ADD CLASSES ===</h2>
+        <h2 className="text-3xl mb-4 font-extrabold text-purple-500"><Fade>=== ADD CLASSES ===</Fade></h2>
         
         <form onSubmit={handleAdd}>
           <div className="mt-5">
