@@ -16,6 +16,10 @@ import Addclass from "./pages/Manageclasses/addclass/Addclass";
 import Manageusers from "./component/manageusers/Manageusers";
 import Updaterequest from "./pages/updaterequ/Updaterequest";
 import Payment from "./pages/Payment/Payment";
+import Myselactedclass from "./pages/Myselactedclass/Myselactedclass";
+import MyenrolledClass from "./pages/myenrolledclass/MyenrolledClass";
+import Studentdashboard from "./pages/studentdashboard/Studentdashboard";
+import Instructorsclass from "./pages/instructorsclass/Instructorsclass";
 
 
 
@@ -69,6 +73,22 @@ export const router = createBrowserRouter([
      {
       path:'payment',
       element:<Payment></Payment>
+     },
+     {
+      path:'myclass',
+      element:<Myselactedclass></Myselactedclass>
+     },
+     {
+      path:'myenroll',
+      element:<MyenrolledClass></MyenrolledClass>
+     },
+     {
+      path:'studendash',
+      element:<Studentdashboard></Studentdashboard>
+     },
+     {
+      path:'instruclass',
+      element:<Instructorsclass></Instructorsclass>
      }
      ]
     },

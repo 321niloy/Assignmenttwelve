@@ -61,7 +61,7 @@ export const becomeaInstructor = email =>{
 
 export const becomeaStudent = email =>{
     const currentuser = {
-        position:'instructor'
+        position:'student'
     }
 
 

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Authcontext } from '../provider/Authprovider/Authprovider';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const Populerclass = () => {
@@ -10,16 +10,9 @@ const Populerclass = () => {
   
  
  useEffect(()=>{
-     fetch(`http://localhost:3000/instrucarts/${user?.email}`,{
-         method:"GET",
-         headers:{
-             'content-type':'application/json'
-         },
-         body: JSON.stringify()
-     })
+     fetch(`http://localhost:3000/instruement`)
      .then(res => res.json())
         .then(data =>{
-            console.log("sold",data)
             setposelacteclass(data)
         })
         

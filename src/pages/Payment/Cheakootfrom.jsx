@@ -1,8 +1,10 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useContext, useEffect, useState } from 'react';
 import { Authcontext } from '../../component/provider/Authprovider/Authprovider';
+import './cheakoutfrom.css'
+import { becomeaStudent } from '../../api/auth';
 
-const Cheakootfrom = ({price}) => {
+const Cheakootfrom = ({price,selacteclass}) => {
     const stripe = useStripe()
     const elements = useElements();
     const {user} = useContext(Authcontext)
@@ -59,7 +61,7 @@ const Cheakootfrom = ({price}) => {
         setCardError(error.message)
       } else {
         setCardError('')
-        console.log('[PaymentMethod]', paymentMethod);
+        // console.log('[PaymentMethod]', paymentMethod);
       }
 
       setProcessing(true)
@@ -88,6 +90,29 @@ const Cheakootfrom = ({price}) => {
       setTransactionId(paymentIntent.id);
       const transactionId = paymentIntent.id;
       // Student Position
+      becomeaStudent(user.email)
+      // ------------
+       // save payment information to the server
+       const payment = {
+        email: user?.email,
+        transactionId: paymentIntent.id,
+        price,
+        date: new Date(),
+        quantity: selacteclass.length,
+        cartItems: selacteclass.map(item => item._id),
+        // menuItems: selacteclass.map(item => item.menuItemId), ///////////////////////
+        status: 'service pending',
+        itemNames: selacteclass.map(item => item.name,)
+    }
+    fetch(`http://localhost:3000/payments`,{
+      method:"POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payment)
+      })
+      .then(res => res.json())
+      .then(data => {
+         console.log(data)
+      })
     }
     }
     return (

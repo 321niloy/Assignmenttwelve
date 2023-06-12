@@ -35,7 +35,7 @@ const Payment = () => {
             <div className='text-green-500 h-9 text-center'>_________________________________________</div>
             <div className='mt-4'>
                 <Elements stripe={stripePromise}>
-                <Cheakootfrom price={price}></Cheakootfrom>
+                <Cheakootfrom price={price} selacteclass={selacteclass}></Cheakootfrom>
                 </Elements>
               
             </div>
