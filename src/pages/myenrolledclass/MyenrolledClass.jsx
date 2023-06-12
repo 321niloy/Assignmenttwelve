@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useTitle from '../../hook/useTitle';
+import { Fade } from 'react-awesome-reveal';
 
 const MyenrolledClass = () => {
     const [enrollclass,setenrollclass] =useState()
@@ -15,7 +16,7 @@ const MyenrolledClass = () => {
     },[])
     return (
 <>
-<h1 className='text=3xl text-center text-purple-500 mb-5'>Enrolled Classes</h1>
+<h1 className='text=3xl text-center text-purple-500 mb-5'><Fade>Enrolled Classes</Fade></h1>
 {
 enrollclass?.map((en,index) => <h1><span className='text-slate-600'>{index+1}st enroll class or Classses</span><span className='text-black font-extrabold'>=</span>{en.itemNames}</h1>
 )
