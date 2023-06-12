@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../hook/useTitle';
 
 const MyenrolledClass = () => {
     const [enrollclass,setenrollclass] =useState()
+    useTitle('My enroll')
 
     useEffect(()=>{
         fetch('http://localhost:3000/paymentget')
