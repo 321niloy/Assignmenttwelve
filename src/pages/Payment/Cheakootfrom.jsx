@@ -8,20 +8,24 @@ const Cheakootfrom = ({price}) => {
     const {user} = useContext(Authcontext)
     const [cardError,setCardError]=useState('')
     const [clientSecret, setClientSecret] = useState("");
-    
+    const [processing, setProcessing] = useState(false);
+    const [transactionId, setTransactionId] = useState('');
+
     useEffect(()=>{
     
-    fetch(`http://localhost:3000/create-payment-intent`,{
+    if(price>0){
+      fetch(`http://localhost:3000/create-payment-intent`,{
     method:"POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(price)
+    body: JSON.stringify({price})
     })
     .then(res => res.json())
     .then(data => {
         console.log("back",data.clientSecret)
         setClientSecret(data.clientSecret)
     })
-    },[])
+    }
+    },[price])
 
 
 
@@ -58,6 +62,8 @@ const Cheakootfrom = ({price}) => {
         console.log('[PaymentMethod]', paymentMethod);
       }
 
+      setProcessing(true)
+
       const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(
         clientSecret,
         {
@@ -75,7 +81,14 @@ const Cheakootfrom = ({price}) => {
         console.log(confirmError)
     }
 
-    console.log(paymentIntent)
+    console.log("paymentintent",paymentIntent)
+    setProcessing(false)
+
+    if(paymentIntent.status === 'succeeded'){
+      setTransactionId(paymentIntent.id);
+      const transactionId = paymentIntent.id;
+      // Student Position
+    }
     }
     return (
   <>
@@ -100,7 +113,8 @@ const Cheakootfrom = ({price}) => {
           {
         cardError && <p className='text-red-700 mt-3'>{cardError}</p>
       }
-        <button className='bg-purple-950 w-20 mt-4' type="submit" disabled={!stripe || !clientSecret}>
+       {transactionId && <p className="text-green-500 mt-3">Transaction complete with transactionId: {transactionId}</p>}
+        <button className='bg-purple-950 w-20 mt-4' type="submit" disabled={!stripe || !clientSecret ||  processing}>
           Pay
         </button>
       </form>
