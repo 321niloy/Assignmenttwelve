@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Cheakootfrom from './Cheakootfrom';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
@@ -35,7 +35,7 @@ const Payment = () => {
             <div className='text-green-500 h-9 text-center'>_________________________________________</div>
             <div className='mt-4'>
                 <Elements stripe={stripePromise}>
-                <Cheakootfrom price={price }></Cheakootfrom>
+                <Cheakootfrom price={price}></Cheakootfrom>
                 </Elements>
               
             </div>
