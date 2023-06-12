@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../hook/useTitle';
 
 const Updaterequest = () => {
  const [update,setupdate] = useState()
- 
+ useTitle('Update admin ')
 
  useEffect(()=>{
     fetch('http://localhost:3000/requestcollection')
