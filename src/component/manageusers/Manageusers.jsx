@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { becomeaAdmin, becomeaInstructor } from '../../api/auth';
+import useTitle from '../../hook/useTitle';
 
 const Manageusers = () => {
     const [usersinf,setusersinfo] = useState()
+    useTitle('Manageusers')
     useEffect(()=>{
     fetch(`http://localhost:3000/users`)
     .then(res => res.json())
