@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../hook/useTitle';
 
 const Studentdashboard = () => {
     const [paymentclass,setpaymentclass] =useState()
-
+    useTitle('student payment')
     useEffect(()=>{
         fetch('http://localhost:3000/paymentget')
         .then(res => res.json())
