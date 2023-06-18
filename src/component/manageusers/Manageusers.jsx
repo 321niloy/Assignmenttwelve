@@ -6,7 +6,7 @@ const Manageusers = () => {
     const [usersinf,setusersinfo] = useState()
     useTitle('Manageusers')
     useEffect(()=>{
-    fetch(`http://localhost:3000/users`)
+    fetch(`https://assignment-twelve-server-321niloy.vercel.app/users`)
     .then(res => res.json())
     .then(data =>{
         setusersinfo(data)

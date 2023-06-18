@@ -4,7 +4,7 @@ const Populerinstructor = () => {
 const [insBio,setinsbio] = useState()
 
     useEffect(()=>{
-        fetch('http://localhost:3000/instructor')
+        fetch('https://assignment-twelve-server-321niloy.vercel.app/instructor')
         .then(res => res.json())
         .then(data => {
                 console.log("aaa",data)

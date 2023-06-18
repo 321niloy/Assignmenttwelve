@@ -13,7 +13,7 @@ const Myselactedclass = () => {
     const total = selacteclass.reduce((sum, item) => item.price + sum, 0);
  
  useEffect(()=>{
-     fetch(`http://localhost:3000/instrucarts/${user?.email}`,{
+     fetch(`https://assignment-twelve-server-321niloy.vercel.app/instrucarts/${user?.email}`,{
          method:"GET",
          headers:{
              'content-type':'application/json'
@@ -31,7 +31,7 @@ const Myselactedclass = () => {
  const handlecancel =(id)=>{
      console.log("lllll")
    
-  fetch(`http://localhost:3000/instrucarts/${id}`, {
+  fetch(`https://assignment-twelve-server-321niloy.vercel.app/instrucarts/${id}`, {
                  method: 'DELETE'
              })
                  .then(res => res.json())

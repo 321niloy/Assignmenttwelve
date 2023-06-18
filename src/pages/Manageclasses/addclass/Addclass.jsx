@@ -22,7 +22,7 @@ useTitle('Add class')
         }
  
         form.reset()
-        fetch(`http://localhost:3000/requestcollection`,{
+        fetch(`https://assignment-twelve-server-321niloy.vercel.app/requestcollection`,{
             method:'POST',
             headers: {
                 'content-type': 'application/json'

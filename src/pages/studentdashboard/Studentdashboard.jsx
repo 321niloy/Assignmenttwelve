@@ -5,7 +5,7 @@ const Studentdashboard = () => {
     const [paymentclass,setpaymentclass] =useState()
     useTitle('student payment')
     useEffect(()=>{
-        fetch('http://localhost:3000/paymentget')
+        fetch('https://assignment-twelve-server-321niloy.vercel.app/paymentget')
         .then(res => res.json())
         .then(data =>{
             console.log(data)
@@ -14,7 +14,7 @@ const Studentdashboard = () => {
     },[])
     return (
         <div>
-            <h1>Studentdashboard</h1>
+            <h1>Student Dashboard</h1>
             <div>
 
             <div className="overflow-x-auto">

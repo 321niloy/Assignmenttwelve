@@ -6,7 +6,7 @@ const Updaterequest = () => {
  useTitle('Update admin ')
 
  useEffect(()=>{
-    fetch('http://localhost:3000/requestcollection')
+    fetch('https://assignment-twelve-server-321niloy.vercel.app/requestcollection')
     .then(res => res.json())
     .then(data =>{
         
@@ -21,7 +21,7 @@ const Updaterequest = () => {
     const updateclasses = {
         name,instructorName,instructorEmail,availableSeats,price,image
     }
-    fetch(`http://localhost:3000/instruement`,{
+    fetch(`https://assignment-twelve-server-321niloy.vercel.app/instruement`,{
             method:'POST',
             headers: {
                 'content-type': 'application/json'
@@ -38,7 +38,7 @@ const Updaterequest = () => {
 
 const handleDenide=id=>{
     console.log('jjjjjjj',id)
-    fetch(`http://localhost:3000/requestcollection/${id}`,{
+    fetch(`https://assignment-twelve-server-321niloy.vercel.app/requestcollection/${id}`,{
             method:'DELETE',
         })
         .then(res => res.json())

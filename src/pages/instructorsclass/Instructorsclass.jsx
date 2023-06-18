@@ -9,7 +9,7 @@ const Instructorsclass = () => {
 const [myclass,setmyclass] = useState()
 
     useEffect(()=>{
-        fetch('http://localhost:3000/instruement')
+        fetch('https://assignment-twelve-server-321niloy.vercel.app/instruement')
         .then(res => res.json())
         .then(data => {
                 console.log("aaa",data)

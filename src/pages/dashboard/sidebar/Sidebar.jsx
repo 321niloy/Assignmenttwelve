@@ -6,7 +6,7 @@ const Sidebar = () => {
    const [navuser,setnavuser] = useState([])
    const {user} = useContext(Authcontext)
     useEffect(()=>{
-        fetch('http://localhost:3000/users')
+        fetch('https://assignment-twelve-server-321niloy.vercel.app/users')
         .then(res => res.json())
         .then(data => {
             const remain = data.find(d=> d.email === user.email)

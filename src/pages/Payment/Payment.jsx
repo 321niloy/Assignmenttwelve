@@ -16,7 +16,7 @@ const Payment = () => {
     const total = selacteclass.reduce((sum, item) => item.price + sum, 0);
     const price = parseFloat(total.toFixed(2))
  useEffect(()=>{
-     fetch(`http://localhost:3000/instrucarts/${user?.email}`,{
+     fetch(`https://assignment-twelve-server-321niloy.vercel.app/instrucarts/${user?.email}`,{
          method:"GET",
          headers:{
              'content-type':'application/json'

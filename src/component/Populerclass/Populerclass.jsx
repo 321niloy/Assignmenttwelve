@@ -10,7 +10,7 @@ const Populerclass = () => {
   
  
  useEffect(()=>{
-     fetch(`http://localhost:3000/instruement`)
+     fetch(`https://assignment-twelve-server-321niloy.vercel.app/instruement`)
      .then(res => res.json())
         .then(data =>{
             setposelacteclass(data)
@@ -23,7 +23,7 @@ const Populerclass = () => {
     const {_id,image,name,instructorName,availableSeats,price} = item
     if(user && user.email){
         const cartItem = {image,name,instructorName,availableSeats,price, email: user.email}
-        fetch('http://localhost:3000/instrucarts', {
+        fetch('https://assignment-twelve-server-321niloy.vercel.app/instrucarts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

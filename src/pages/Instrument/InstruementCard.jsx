@@ -14,7 +14,7 @@ const InstruementCard = ({instru}) => {
       const {_id,image,name,instructorName,availableSeats,price,instructorEmail} = item
       if(user && user.email){
           const cartItem = {image,name,instructorName,instructorEmail,availableSeats,price, email: user.email}
-          fetch('http://localhost:3000/instrucarts', {
+          fetch('https://assignment-twelve-server-321niloy.vercel.app/instrucarts', {
               method: 'POST',
               headers: {
                   'content-type': 'application/json'

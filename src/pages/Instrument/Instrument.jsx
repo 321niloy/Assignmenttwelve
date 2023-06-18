@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import InstruementCard from './InstruementCard';
 import useTitle from '../../hook/useTitle';
 
-
+// istruement ---------------------
 const Instrument = () => {
     const [instruement,setinstrument] = useState()
     useTitle('All Classes')
     useEffect(()=>{
-        fetch('http://localhost:3000/instruement')
+        fetch('https://assignment-twelve-server-321niloy.vercel.app/instruement')
         .then(res => res.json())
         .then(data =>{
             setinstrument(data)

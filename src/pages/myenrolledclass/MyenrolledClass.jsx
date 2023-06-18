@@ -7,7 +7,7 @@ const MyenrolledClass = () => {
     useTitle('My enroll')
 
     useEffect(()=>{
-        fetch('http://localhost:3000/paymentget')
+        fetch('https://assignment-twelve-server-321niloy.vercel.app/paymentget')
         .then(res => res.json())
         .then(data =>{
             console.log(data)

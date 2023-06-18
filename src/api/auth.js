@@ -6,7 +6,7 @@ export const saveUser = user =>{
     }
 
 
-    fetch(`http://localhost:3000/users/${user?.email}`,{
+    fetch(`https://assignment-twelve-server-321niloy.vercel.app/users/${user?.email}`,{
         method:'PUT',
         headers:{
             'content-type':'application/json'
@@ -26,7 +26,7 @@ export const becomeaAdmin = email =>{
     }
 
 
-    fetch(`http://localhost:3000/users/${email}`,{
+    fetch(`https://assignment-twelve-server-321niloy.vercel.app/users/${email}`,{
         method:'PUT',
         headers:{
             'content-type':'application/json'
@@ -46,7 +46,7 @@ export const becomeaInstructor = email =>{
     }
 
 
-    fetch(`http://localhost:3000/users/${email}`,{
+    fetch(`https://assignment-twelve-server-321niloy.vercel.app/users/${email}`,{
         method:'PUT',
         headers:{
             'content-type':'application/json'
@@ -65,7 +65,7 @@ export const becomeaStudent = email =>{
     }
 
 
-    fetch(`http://localhost:3000/users/${email}`,{
+    fetch(`https://assignment-twelve-server-321niloy.vercel.app/users/${email}`,{
         method:'PUT',
         headers:{
             'content-type':'application/json'

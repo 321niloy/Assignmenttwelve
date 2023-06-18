@@ -16,7 +16,7 @@ const Cheakootfrom = ({price,selacteclass}) => {
     useEffect(()=>{
     
     if(price>0){
-      fetch(`http://localhost:3000/create-payment-intent`,{
+      fetch(`https://assignment-twelve-server-321niloy.vercel.app/create-payment-intent`,{
     method:"POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({price})
@@ -104,7 +104,7 @@ const Cheakootfrom = ({price,selacteclass}) => {
         status: 'service pending',
         itemNames: selacteclass.map(item => item.name,)
     }
-    fetch(`http://localhost:3000/payments`,{
+    fetch(`https://assignment-twelve-server-321niloy.vercel.app/payments`,{
       method:"POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payment)
@@ -166,7 +166,7 @@ export default Cheakootfrom;
 //   useEffect(() => {
 //     const fetchClientSecret = async () => {
 //       try {
-//         const response = await fetch('http://localhost:3000/create-payment-intent', {
+//         const response = await fetch('https://assignment-twelve-server-321niloy.vercel.app/create-payment-intent', {
 //           method: 'POST',
 //           headers: {
 //             'Content-Type': 'application/json',
